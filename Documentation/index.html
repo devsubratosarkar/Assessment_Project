@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <title>REBPOL - Documentation</title>
+      <!-- Styles -->
+      <link href="assets/css/all.min.css" rel="stylesheet">
+      <link href="assets/css/skin-blue.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+      <!-- Fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+      <!-- Favicons -->
+      <link rel="icon" href="assets/img/favicon.png">
+   </head>
+   <body data-spy="scroll" data-target=".sidebar" data-offset="200">
+      <!-- Sidebar -->
+      <aside class="sidebar sidebar-boxed sidebar-dark" style="background-color: #000000;">
+         <a class="sidebar-brand" style="background-color: #27ae60;" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+         <ul class="nav sidenav dropable">
+            <li><a href="">REBPOL Software</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#cron">Cron</a></li>
+            <li><a href="#edit">How To Edit</a></li>
+            <li><a href="#html">HTML Structure</a></li>
+            <li><a href="#css">CSS Folder location</a></li>
+            <li><a href="#js">JS Folder location</a></li>
+            <li><a href="">ADMIN PANEL</a></li>
+            <li><a href="#adminlog">Admin Login</a></li>
+            <li><a href="#user">User Management</a></li>
+            <li><a href="#web">Web Interface</a></li>
+            <li><a href="#userlog">User Login</a></li>
+            <li><a href="#faq">Frequently Asked Question</a></li>
+            <li><a href="#support">Support</a></li>
+         </ul>
+      </aside>
+      <!-- END Sidebar -->
+      <header class="site-header navbar-transparent">
+         <!-- Top navbar & branding -->
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <!-- Toggle buttons and brand -->
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                  <span class="glyphicon glyphicon-option-vertical"></span>
+                  </button>
+                  <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+               </div>
+               <!-- END Toggle buttons and brand -->
+               <!-- Top navbar -->
+               <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                  <ul class="nav navbar-nav navbar-right">
+                     <li class="hero"><a href="#" target="_blank">Purchase</a></li>
+                  </ul>
+               </div>
+               <!-- END Top navbar -->
+            </div>
+         </nav>
+         <!-- END Top navbar & branding -->
+         <!-- Banner -->
+         <div class="banner auto-size" style="background-color: #27ae60" id="introduction">
+            <div class="container-fluid text-white">
+               <h1><strong>Rebpol</strong> Documentation</h1>
+               <h5>For a quick and easy installation we created for you this technical support.</h5>
+               <br>
+               <strong>Created At: </strong> 08-06-2020
+               <br>
+               <strong>Powered By: </strong> <a href="http://s7template.com/" style="color: #fff">rebpol</a>
+               <br>
+               <strong>Contact At: </strong> <a href="mailto:support@s7template.com" style="color: #fff">support@rebpol.com</a>
+               <br>
+               <br>
+               <p>If you have any questions that are beyond the scope of this help file, please feel free to email, via my user page contact form or put a ticket at Support Center .
+                  <br>Thank you so much!
+               </p>
+            </div>
+         </div>
+         <!-- END Banner -->
+      </header>
+      <main class="container-fluid">
+         <!-- Main content -->
+         <article class="main-content" role="main">
+            <p class="lead" style="padding-bottom: 50px">Please use the left navigation bar to browse through this support. Let’s go !</p>
+            <section>
+               <h2 id="installation"><strong>Installation</strong></h2>
+               <strong>Before install, please make sure you have the components bellow enable on your server</strong>
+               <pre>
+            <code>
+            PHP 7.2 or greater (with PHP exec function, etc.)
+            OpenSSL PHP Extension
+            PDO PHP Extension
+            Mbstring PHP Extension
+            Tokenizer PHP Extension
+            XML PHP Extension
+            PHP Fileinfo extension
+            PHP Zip Archive
+            Rewrite Module
+            </code>
+            </pre>
+               <strong>File and folder permissions</strong>
+               <pre>
+            <code>
+            /bootstrap        775 or 770
+            /public/uploads   775 or 770
+            /storage          775 (recursively)
+            </code>
+            </pre>
+            </section>
+            <section>
+               <h2 id="installation-apache"><strong>Installation with Apache</strong></h2>
+               <h4><strong>Creating a new Database</strong></h4>
+               <p>First thing you want to do before installing <strong>Rebpol</strong> is to create a new database on your mysql server. If you already know how to do this/or have already created one just skip to the next step.</p>
+               <p>Your hosting provider will most likely have <strong>phpMyAdmin</strong> as mysql manager. If that is the case here is a step by step guide (if not the process will be very similar on other managers.</p>
+               <p>Login to your control panel, find and click phpMyAdmin link.</p>
+               <p>Click on the database tab in the top menu, enter any name for your database and click create.</p>
+               <h4><strong>Uploading Files</strong></h4>
+               <p>After creating a database, unzip the file you donwloaded from CodeCanyon and upload the <strong>contents</strong> of <strong>Rebpol</strong> folder to your server root, usually called <strong>www</strong> or <strong>html</strong> or <strong>public_html</strong>.</p>
+               <div class="alert alert-warning" role="alert">
+                  <strong>Important:</strong> Always use a desktop application like <a href="https://filezilla-project.org/" target="_blank" rel="noopener noreferrer">FileZilla</a> to upload files to FTP as opposed to web based file managers to avoid issues with corrupted or not properly uploaded files.
+               </div>
+               <div class="alert alert-warning" role="alert">
+                  <strong>Important:</strong> Make sure that <strong>.htaccess</strong> file got copied properly from the download to main Rebpol folder on your server.
+               </div>
+            </section>
+            <section>
+               <h2 id="setup"><strong>Setup</strong></h2>
+               <ul>
+                  <li>Upload project.zip to your host and unzip</li>
+                  <li> Create mySQL Database and upload DB.sql (From DB Folder).</li>
+                  <li> Goto File Manager and Copy Paste Database Information at .env File.</li>
+                  <li> Now Run your Website.</li>
+                  <li> Visit your site http://YourSiteName.com</li>
+                  <li> Visit your site (Admin Panel) http://YourSiteName.com/admin</li>
+                  <li> Admin Email: admin@admin.com || Admin Password: admin</li>
+                  <li> System is fully dynamic so you able to change anythings from admin panel.</li>
+               </ul>
+               <p><strong>NOTE:</strong> If you still unable to install then pls mail us, we will install it for FREE</p>
+               <br><br>
+               <h4>Take A look about..</h4>
+               <a href="https://www.youtube.com/watch?v=tbXIEmn_Csw" target="_blank">How to upload Files in Cpanel</a><br/>
+               <a href="https://www.youtube.com/watch?v=URaJotkQaJg" target="_blank">How to upload Database in Cpanel</a><br/>
+            </section>
+            <section>
+               <h2 id="edit"><strong>How To Edit Code</strong></h2>
+               Once You Install The Product on Your Server, You Will have Two Folder and Few Files.
+               <br>
+               <br> On Folder <b>"public"</b>, We keep all kind of asset like <b>CSS, JS, Images</b>. So if You Want To Edit Or Change Any Asset, Have a Look on This Folder.
+               <br>
+               <br> On File Manager, We directly keep The Core of <b>Laravel</b>.
+               <br>
+               <br> We Maintain Laravel Structure(MVC) on This Project.
+               <br>
+               <br>
+               <b>"routes/web.php"</b> All Routes (URL) in This Folder. You can find the ControllerName@FunctionName Here.
+               <br>
+               <br>
+               <b>"app"</b> All Models are in This Folder.
+               <br>
+               <br>
+               <b>"app/Http"</b> All Controller are in This Folder. You can Change anything you want if you need to change any functionality.
+               <br>
+               <br>
+               <b>"resources/views"</b> You Have All HTML Structure Here. You can Change anything you want if you need to change anything on HTML.
+            </section>
+            <section>
+               <h2 id="html"><strong>Template HTML Structure</strong></h2>
+               <h3>The html template uses Latest <strong>Bootstrap v4.3.0</strong> with valid HTML5 tags. This theme is a responisve layout with 12 column Support column. All of the information in content area is nested within a class and comes with predefined classes.</h3>
+               <center>
+                  <img src="assets/img/html.png" alt="banner" height="100%" width="100%">
+               </center>
+            </section>
+            <section>
+               <h2 id="css"><strong>CSS Folder location</strong></h2>
+               <p><strong> Used Css File For Various Purpose :</strong></p>
+               <br>
+               <strong>NOTE:</strong> CSS Folder location <strong>public/admin/css</strong>
+               <br>
+               <br>
+               <p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>
+            </section>
+            <section>
+               <h2 id="js"><strong>JavaScript Folder location</strong></h2>
+               <ul>
+                  <br>
+                  <li><strong>jQuery</strong> is a Javascript library that greatly reduces the amount of code that you must write.</li>
+                  <li>Most of the animation in this site is carried out from the customs scripts. There are a few functions worth looking over.</li>
+               </ul>
+               <br>
+               <br>
+               <strong>NOTE:</strong> JavaScript Folder location <strong>public/admin/js</strong>
+               <br>
+               <br>
+               <p>In addition to the custom scripts, I have implemented few "tried and true" plugins to create the effects. This plugin is packed, so you won't need to manually edit anything in the file. The only necessary thing to know is how to call the method</p>
+            </section>
+            <!--Admin login-->
+            <section class="section" id="adminlog">
+               <div class="sec-title">
+                  <h2>Admin Login</h2>
+               </div>
+               <code> yourdomain.com/admin</code>
+               <h2>Example</h2>
+               <p><strong>Admin Demo:</strong>  <a href="http://s7template.com/code/bankzone/admin" target="_blank" rel="nofollow">Admin Login</a>
+                  <br>
+                  <strong>Username</strong> <a href="mailto:admin@admin.com">admin@admin.com</a>
+                  <br>
+                  <strong>Password</strong> admin
+               </p>
+               <br />
+               <div class="sec-content">
+                  <div class="html-code">
+                     <img class="dsh-img" src="assets/img/adminlog.png" alt="image html"/>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="sec-content">
+                     <h2>Output</h2>
+                     <br>
+                     <div class="html-code">
+                        <img class="dsh-img" src="assets/img/adminpanel.png" alt="image html"/>
+                     </div>
+                     <br>
+                  </div>
+               </div>
+            </section>
+            <section class="section" id="user">
+               <div class="sec-title">
+                  <h2>User Management</h2>
+               </div>
+               <code> yourdomain.com/admin</code>
+               <h2>Admin Create, Delete, Update User Information </h2>
+               <br />
+               <div class="sec-content">
+                  <div class="html-code">
+                     <img class="dsh-img" src="assets/img/user.png" alt="image html"/>
+                  </div>
+                  <br>
+               </div>
+            </section>
+            <section class="section" id="web">
+               <div class="sec-title">
+                  <h2>Web Interface</h2>
+               </div>
+               <h2>Admin Update all web content by Admin Panel </h2>
+               <br />
+               <div class="sec-content">
+                  <div class="html-code">
+                     <img class="dsh-img" src="assets/img/web.png" alt="image html"/>
+                  </div>
+                  <br>
+               </div>
+            </section>
+            <!--User login-->
+            <section class="section" id="userlog">
+               <div class="sec-title">
+                  <h2>User Login</h2>
+               </div>
+               <code> yourdomain.com/admin</code>
+               <h2>Example</h2>
+               <p><strong>User Demo ( 1st Registation / Sign-UP ):</strong>  <a href="http://s7template.com/code/bankzone/login" rel="nofollow">Editor Login</a>
+                  <br>
+                  <strong>Username</strong> <a href="mailto:demo@demo.com">demo@demo.com</a>
+                  <br>
+                  <strong>Password</strong> 12345678
+               </p>
+               <br />
+               <div class="sec-content">
+                  <div class="html-code">
+                     <img class="dsh-img" src="assets/img/userlog.png" alt="image html"/>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="sec-content">
+                     <h2>Output</h2>
+                     <br>
+                     <div class="html-code">
+                        <img class="dsh-img" src="assets/img/userpanel.png" alt="image html"/>
+                     </div>
+                     <br>
+                  </div>
+               </div>
+            </section>
+            <section>
+               <h2 id="faq"><strong>Frequently Asked Question</strong></h2>
+               <h5><strong>Do i need <span class="s1">VPS OR Dedicated Server?</span></strong></h5>
+               <ul>
+                  <li>No you can run our product with shared server too.</li>
+               </ul>
+               <h5><strong>Which <span class="s1">Hosting Provider</span>  will be best you think? </strong></h5>
+               <ul>
+                  <li>Any hosting provider who provide <strong>Cpanel Based Hosting</strong>. Even if you can run this in <strong>Local Host</strong> too</li>
+               </ul>
+               <h5><strong>What is Cpanel?</strong></h5>
+               <ul>
+                  <li>Cpanel is a Control panel for server. You can Check More <a href='http://cpanel.net/' target='_blank'> Here </a></li>
+               </ul>
+               Please see more features by visiting your <strong>Admin panel</strong> / <strong>Settings</strong>...
+            </section>
+            <section>
+               <h2 id="credit"><strong>Source and Credit</strong></h2>
+               <p>Fonts Used in the template are google fonts, you can find them on Google Fonts API. <a href="http://fonts.googleapis.com/css?family=Raleway" target="_blank">http://fonts.googleapis.com/css?family=Raleway</a></p>
+               <br>
+               <p><strong> Development Framework Used are:</strong></p>
+               <p><strong><i class="fa fa-check" aria-hidden="true"></i>Laravel 7.0</strong> <a href="https://laravel.com/" target="_blank">https://laravel.com/</a></p>
+               <br>
+               <p><strong> Design Framework Used are:</strong></p>
+               <p><strong><i class="fa fa-check" aria-hidden="true"></i>Bootstrap</strong> <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a></p>
+               <br>
+               <p><strong> JavaScript Library Used are:</strong></p>
+               <p><strong><i class="fa fa-check" aria-hidden="true"></i>jQuery</strong> <a href="https://jquery.com/" target="_blank">https://jquery.com/</a></p>
+               <br>
+               <p><strong> Icon Used are:</strong></p>
+               <p><strong><i class="fa fa-check" aria-hidden="true"></i>Fontawsome Icons</strong> <a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">https://fortawesome.github.io/Font-Awesome/</a></p>
+               <br>
+            </section>
+            <section>
+               <h2 id="support"><strong>Support</strong></h2>
+               <h5 class="text-justify">Once again, thank you so much . As I said at the beginning, I'd be glad to help you if you have any questions relating to this Script. No guarantees, but I'll do my best to assist. If you have any queries, please feel free to contact us at Support Center.</h5>
+               <p>Email Us at : <a href="mailto:support@s7template.com">support@s7template.com</a></p>
+            </section>
+         </article>
+         <!-- END Main content -->
+         <!-- Footer -->
+         <footer class="site-footer" style="display: block">
+            <div class="row">
+               <div class="col-md-12">
+                  <p>Copyright &copy;2020. All right reserved. Developed BY <a href="https://s7template.com/" target="_blank">s7template</a></p>
+               </div>
+            </div>
+         </footer>
+         <!-- END Footer -->
+      </main>
+      <!-- Scripts -->
+      <script src="assets/js/all.min.js"></script>
+   </body>
+</html>

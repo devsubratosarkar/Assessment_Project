@@ -1,0 +1,26 @@
+.bg-gradient-primary{
+	background-image: linear-gradient(180deg, #4e4376 50%, #26a0da 100%);
+}
+.sidebar-dark .sidebar-brand{
+	    color: #181819;
+}
+#topbarHotNumber i{
+	background: #4e4376;
+}
+.admin-img{
+	max-width: 50px;
+}
+#dvd_image, #dvd_image2, #dvd_image3{
+	width: 300px !important;
+}
+.right_col{
+	min-height: 576.183px;
+}
+
+/*New*/
+.wrap{
+
+}
+.serc{
+	width: 250px;
+}
